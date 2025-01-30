@@ -1,0 +1,25 @@
+ALGORITHM:
+VAR:
+    sentence, length_counter, word_counter, vowel_counter, vowels
+BEGIN
+    SET sentence = INPUT("I see a crystal raindeop fall and the beauty of it all.:")
+    SET length_counter = 0;
+    SET word_counter = 1;
+    SET vowel_counter = 0;
+    SET vowels = "aeiouAEIOU" 
+    
+    FOR each character in sentence DO
+        INCREMENT length_counter by 1
+        IF character is a vowel THEN
+            INCREMENT vowel_counter by 1
+        END IF
+        
+        IF character is a space THEN
+            INCREMENT word_counter by 1
+        END IF
+    END FOR
+    
+    PRINT "Length of the sentence: ", length_counter
+    PRINT "Number of words in the sentence: ", word_counter
+    PRINT "Number of vowels in the sentence: ", vowel_counter
+END
